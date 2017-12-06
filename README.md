@@ -2,6 +2,8 @@
 
 查看cmake构建脚本请转移至项目 [https://github.com/lizhangqu/aapt-cmake-buildscript](https://github.com/lizhangqu/aapt-cmake-buildscript)
 
+## for mac
+
 创建大小写敏感磁盘
 
 ```
@@ -20,6 +22,18 @@ hdiutil attach aapt.dmg.sparseimage -mountpoint /Volumes/aapt
 hdiutil detach /Volumes/aapt
 ```
 
+## for linux(Ubuntu 16.0.4)
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install openjdk-8-jdk
+sudo apt-get install cmake
+sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip
+```
+
+## 构建
+
 安装repo
 
 ```
@@ -32,6 +46,7 @@ chmod a+x ~/bin/repo
 初始化repo项目
 
 ```
+#进入工作目录
 cd /Volumes/aapt
 #如果存在repo bundle下载不下来的情况，请使用下面的命令进行手动clone
 #git clone http://mirrors.ustc.edu.cn/aosp/git-repo.git/ .repo/repo
@@ -43,8 +58,12 @@ repo sync -j8
 执行构建，构建过程中发生错误请自行根据提示安装对应的依赖库
 
 ```
+#进入工作目录
 cd /Volumes/aapt
-cmake -H"./" -B"./build-cmake" 
+#使用cmake生产构建文件，并最小化编译产物
+cmake -H"./" -B"./build-cmake" -DCMAKE_BUILD_TYPE=MinSizeRel
+#编译aapt
 cmake --build "./build-cmake" --target aapt
+#编译aapt2
 cmake --build "./build-cmake" --target aapt2
 ```
