@@ -19,7 +19,8 @@
   <project path="external/libcxx" name="platform/external/libcxx" groups="pdk" />
   <project path="external/libcxxabi" name="platform/external/libcxxabi" groups="pdk" />
   <project path="external/compiler-rt" name="platform/external/compiler-rt" groups="pdk" />
- 
+  
+  <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" /> 
 
   <remote  name="github" fetch="https://github.com/lizhangqu/" />
   <project path="buildscript" name="aapt-cmake-buildscript.git" remote="github" revision="android-8.1.0_r1">
