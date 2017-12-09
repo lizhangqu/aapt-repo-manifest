@@ -34,6 +34,7 @@ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zl
 
 ## 构建
 
+
 安装repo
 
 ```
@@ -66,4 +67,6 @@ cmake -H"./" -B"./build-cmake" -DCMAKE_BUILD_TYPE=MinSizeRel
 cmake --build "./build-cmake" --target aapt
 #编译aapt2
 cmake --build "./build-cmake" --target aapt2
+#编译aapt2_jni
+cmake --build "./build-cmake" --target aapt2_jni
 ```
