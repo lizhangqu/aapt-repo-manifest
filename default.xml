@@ -25,6 +25,7 @@
   <remote  name="github" fetch="https://github.com/lizhangqu/" />
   <project path="buildscript" name="aapt-cmake-buildscript.git" remote="github" revision="android-8.1.0_r1">
     <linkfile src="CMakeLists.txt" dest="CMakeLists.txt" />
+    <linkfile src="windows.toolchain.cmake" dest="windows.toolchain.cmake" />
   </project>
   
 </manifest>
