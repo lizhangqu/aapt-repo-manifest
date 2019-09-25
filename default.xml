@@ -4,7 +4,7 @@
            fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
  
-  <default revision="refs/tags/android-9.0.0_r10"
+  <default revision="refs/tags/android-10.0.0_r3"
            remote="aosp"
            sync-j="4" />
   
@@ -23,7 +23,7 @@
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" /> 
 
   <remote  name="github" fetch="https://github.com/lizhangqu/" />
-  <project path="buildscript" name="aapt-cmake-buildscript.git" remote="github" revision="android-9.0.0_r10">
+  <project path="buildscript" name="aapt-cmake-buildscript.git" remote="github" revision="android-10.0.0_r3">
     <linkfile src="CMakeLists.txt" dest="CMakeLists.txt" />
     <linkfile src="windows.toolchain.cmake" dest="windows.toolchain.cmake" />
   </project>
