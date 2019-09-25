@@ -14,7 +14,6 @@
   <project path="external/expat" name="platform/external/expat" groups="pdk" />
   <project path="external/libpng" name="platform/external/libpng" groups="pdk" />
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
-  <project path="external/safe-iop" name="platform/external/safe-iop" groups="pdk" />
   <project path="external/protobuf" name="platform/external/protobuf" groups="pdk" />
   <project path="external/libcxx" name="platform/external/libcxx" groups="pdk" />
   <project path="external/libcxxabi" name="platform/external/libcxxabi" groups="pdk" />
